@@ -6,9 +6,13 @@ function getRouter() {
     router.get('', (req, res, next) => {
         let query = req.query.q;
 
-        return SearchController.search(query).then(results => {
-            return res.render('results', {results: results});
-        }).catch(next)
+        if (query !== undefined && query.length > 0) {
+            return SearchController.search(query).then(results => {
+                return res.render('results', {query: query ,results: results});
+            }).catch(next)
+        } else {
+            res.render('results', {query: undefined ,results: []});
+        }
     });
     return router
 }
