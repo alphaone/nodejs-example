@@ -2,9 +2,11 @@ extends layout.pug
 
 block content
   h1 Search Results
-  ul
+  ul.results
     each result, index in results
       li
-        img(src=result.artworkUrl100)
-        div.collection=result.collectionName
-        div.artist=result.artistName
+        div
+          img(src=result.artworkUrl100)
+        div.info
+          p.collection=result.collectionName
+          p.artist=result.artistName

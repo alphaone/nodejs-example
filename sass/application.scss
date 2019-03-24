@@ -1,0 +1,30 @@
+body {
+  //font-size: 150%;
+}
+
+ul.results {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  
+  li {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    
+    padding: 1em;
+    margin: 0.5em;
+    
+    img {
+      margin-right: 0.5em;
+      width: 100%;
+    }
+    
+    p {
+      margin: 0;
+    }
+  }
+}
