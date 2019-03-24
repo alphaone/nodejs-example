@@ -13,10 +13,15 @@ class App {
 
     constructor() {
         this.express = express();
+        this._setup();
         this._middleware();
         this._routes();
     }
 
+    _setup() {
+        this.express.set('view engine', 'pug');
+    }
+    
     _middleware() {
         this.express.use(logger('combined'));
         this.express.use(bodyParser.json());

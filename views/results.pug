@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+  h1 Search Results
+  ul
+    each result, index in results
+      li
+        img(src=result.artworkUrl100)
+        div.collection=result.collectionName
+        div.artist=result.artistName

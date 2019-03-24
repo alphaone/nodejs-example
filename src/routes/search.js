@@ -7,7 +7,7 @@ function getRouter() {
         let query = req.query.q;
 
         return SearchController.search(query).then(results => {
-            return res.render('results.ejs', {results: results});
+            return res.render('results', {results: results});
         }).catch(next)
     });
     return router
