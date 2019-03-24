@@ -7,7 +7,7 @@ function search(query) {
     return got(`https://itunes.apple.com/search?media=music&entity=album&term=${query}&limit=10`, { json: true }).then(response => {
         return response.body.results.map((r) => interestingFields(r));
     }).catch(error => {
-        console.log(error.response.body);
+        throw Error(`Got error while calling itunes: ${error.body}`);
     });
 }
 
