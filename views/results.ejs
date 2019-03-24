@@ -1,0 +1,11 @@
+<h1>Search Results</h1>
+
+<ul>
+    <% results.forEach((result, index) => { %>
+        <li>
+            <img src="<%= result.artworkUrl100 %>" alt="">
+            <div class="collection"><%= result.collectionName %></div>
+            <div class="artist"><%= result.artistName %></div>
+        </li>
+    <% }) %>
+</ul>

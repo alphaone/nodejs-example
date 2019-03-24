@@ -18,7 +18,7 @@ class App {
     }
 
     _middleware() {
-        this.express.use(logger('[asset-manager] :method :url :status :response-time ms - :res[content-length]'));
+        this.express.use(logger('combined'));
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({extended: false}));
         this.express.use(cors({optionsSuccessStatus: httpStatusCodes.OK}))

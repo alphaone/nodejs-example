@@ -6,11 +6,8 @@ function getRouter() {
     router.get('', (req, res, next) => {
         let query = req.query.q;
 
-        return SearchController.search(query).then(result => {
-            return res.json({
-                query: query,
-                result: result
-            })
+        return SearchController.search(query).then(results => {
+            return res.render('results.ejs', {results: results});
         }).catch(next)
     });
     return router
