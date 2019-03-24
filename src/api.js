@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const httpStatusCodes = require('http-status-codes');
 const cors = require('cors');
 const health = require('./routes/health');
+const search = require('./routes/search');
 
 const response = require("./errors/response");
 
@@ -24,7 +25,8 @@ class App {
     }
     
     _routes() {
-        this.express.use('/health/', health.getRouter());
+        this.express.use('/health', health.getRouter());
+        this.express.use('/search', search.getRouter());
         // ToDo add your routes here
         this.express.use(this._errorHandler.bind(this))
     }
