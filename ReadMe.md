@@ -19,8 +19,14 @@ To learn the fundamental building blocks of a Node.js application.
   for logging
 * [Pug](https://github.com/pugjs/pug)
   as template engine
+* [node-sass](https://github.com/sass/node-sass) 
+  via [node-sass-middleware](https://github.com/sass/node-sass-middleware)
+  to compile `.scss` files to `.css` files
 * [Got](https://github.com/sindresorhus/got)
   as a HTTP client
+* [dotenv]()
+  to read `.env` files and get configuration from 
+  environment variables
 
 for Testing:
 
